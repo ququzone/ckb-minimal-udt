@@ -9,7 +9,7 @@ import (
 )
 
 func main() {
-	dataFile, err := os.Open("./udt")
+	dataFile, err := os.Open("../src/udt")
 	if err != nil {
 		log.Fatalf("load data file error: %v", err)
 	}

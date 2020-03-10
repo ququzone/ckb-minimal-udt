@@ -15,7 +15,7 @@ import (
 )
 
 func main() {
-	dataFile, err := os.Open("./udt")
+	dataFile, err := os.Open("../src/udt")
 	if err != nil {
 		log.Fatalf("load data file error: %v", err)
 	}
@@ -37,7 +37,7 @@ func main() {
 		log.Fatalf("create rpc client error: %v", err)
 	}
 
-	key, err := secp256k1.HexToKey("ff1f91f7a63893d2f5a1bd424b139718ff6b0eb66853ace772e7a25250ce635f")
+	key, err := secp256k1.HexToKey("d00c06bfd800d27397002dca6fb0993d5ba6399b4238b2f29ee9deb97593d2bc")
 	if err != nil {
 		log.Fatalf("import private key error: %v", err)
 	}

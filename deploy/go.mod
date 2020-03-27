@@ -1,5 +1,7 @@
 module github.com/ququzone/ckb-minimal-udt/deploy
 
+go 1.14
+
 require (
 	cloud.google.com/go v0.50.0 // indirect
 	cloud.google.com/go/bigquery v1.3.0 // indirect

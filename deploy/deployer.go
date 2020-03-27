@@ -32,12 +32,14 @@ func main() {
 		log.Fatalf("read data file error: %v", err)
 	}
 
-	client, err := rpc.Dial("http://127.0.0.1:8114")
+	rpc_url := os.Getenv("ckb_rpc")
+	client, err := rpc.Dial(rpc_url)
 	if err != nil {
 		log.Fatalf("create rpc client error: %v", err)
 	}
 
-	key, err := secp256k1.HexToKey("d00c06bfd800d27397002dca6fb0993d5ba6399b4238b2f29ee9deb97593d2bc")
+	private_key := os.Getenv("private_key")
+	key, err := secp256k1.HexToKey(private_key)
 	if err != nil {
 		log.Fatalf("import private key error: %v", err)
 	}
